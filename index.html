@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Arrow Functions</h1>
+    <script>
+        const makeUpperCase = aString => aString.toUpperCase();
+
+        console.log(makeUpperCase('Here is a string'));
+
+        const fullName = () => {
+            const fName = "bill";
+            const lName = "mead";
+            return `${fName} ${lName}`;
+        }
+        
+
+        console.log(fullName());
+
+        const fruit = ["banana", "apple", "lemon", "kiwi"];
+        const upperFruit = [];
+
+        fruit.forEach (eachFruit => {
+            upperFruit.push(eachFruit.toUpperCase());
+        });
+
+        console.log(upperFruit);
+
+        /*Ejemplo de constructor function*/
+
+        const Employee = function (fname, lname, jobTitle) {
+            this.fname = fname;
+            this.lname = lname;
+            this.position = jobTitle;
+            this.fullName = () => `${fname} ${lname}`
+        }
+
+        const id1234 = new Employee('Bob', 'Smith', 'Mechanic');
+
+        console.log(id1234.fname);
+        console.log(id1234.fullName());
+
+    </script>
+</body>
+</html>
